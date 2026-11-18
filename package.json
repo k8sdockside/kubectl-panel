@@ -1,0 +1,29 @@
+{
+    "name": "k8sdockside-kubectl-panel",
+    "version": "1.0.0",
+    "private": true,
+    "description": "A K8s Dockside panel on every Pod, Deployment and Service that lists the kubectl commands for the object you are looking at.",
+    "license": "Apache-2.0",
+    "author": "K8s Dockside",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/k8sdockside/kubectl-panel"
+    },
+    "type": "module",
+    "engines": {
+        "node": ">=20"
+    },
+    "scripts": {
+        "build": "k8sdockside-plugin build",
+        "watch": "k8sdockside-plugin watch",
+        "typecheck": "tsc --noEmit",
+        "test": "vitest run",
+        "check": "npm run typecheck && npm run test && k8sdockside-plugin check"
+    },
+    "devDependencies": {
+        "@k8sdockside/plugin-sdk": "^1.1.0",
+        "happy-dom": "^21.0.3",
+        "typescript": "^7.0.2",
+        "vitest": "^5.0.5"
+    }
+}

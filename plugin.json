@@ -1,0 +1,28 @@
+{
+    "$schema": "https://raw.githubusercontent.com/k8sdockside/k8sdockside/main/docs/plugin.schema.json",
+    "id": "kubectl-panel",
+    "name": "kubectl panel",
+    "version": "1.0.0",
+    "minAppVersion": "0.1.36",
+    "tagline": "the kubectl commands for what you are looking at",
+    "icon": "terminal",
+    "logo": "logo.svg",
+    "author": "K8s Dockside",
+    "authorUrl": "https://github.com/k8sdockside",
+    "links": [{ "label": "Source", "url": "https://github.com/k8sdockside/kubectl-panel" }],
+    "description": "A panel on every Pod, Deployment and Service that lists the kubectl commands for that object: get, describe, logs, exec, port-forward, rollout and scale, filled in from the object itself and ready to paste. Every line names its cluster with --context, so a command copied from one tab cannot run against another; untick the box at the top of the panel to leave it off. Open any Pod, Deployment or Service to see it.",
+
+    "requires": [
+        { "kind": "pods", "label": "Pods" },
+        { "kind": "deployments", "label": "Deployments" },
+        { "kind": "services", "label": "Services" }
+    ],
+
+    "sections": [
+        { "id": "pod-kubectl", "label": "kubectl", "kind": "pods", "entry": "kubectl.html", "height": 360 },
+        { "id": "deployment-kubectl", "label": "kubectl", "kind": "deployments", "entry": "kubectl.html", "height": 420 },
+        { "id": "service-kubectl", "label": "kubectl", "kind": "services", "entry": "kubectl.html", "height": 280 }
+    ],
+
+    "ui": {}
+}

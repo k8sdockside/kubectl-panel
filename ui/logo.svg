@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+    <title>kubectl panel</title>
+    <!-- A terminal with a prompt in it: the panel is a list of command lines.
+         currentColor, so it takes the app's colour wherever it is drawn. -->
+    <rect x="3" y="5" width="26" height="22" rx="3" />
+    <path d="M9 13l4 3-4 3" />
+    <path d="M16 20h7" />
+</svg>
